@@ -1,0 +1,100 @@
+.feedback {
+    @media (max-width: 768px) {
+        display: none;
+    }
+}
+
+.feedback__wrapper {
+    ul {
+        display: flex;
+        flex-direction: column;
+        li {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            .item {
+                display: flex;
+                align-items: center;
+                flex: 1 0 49%;
+                max-width: 49%;
+                justify-content: flex-end;
+
+                input {
+                    width: 100%;
+                    border: 1px solid #4f4f51;
+                    border-radius: 25px;
+                    line-height: 50px;
+                    padding: 0 30px;
+                    &[type="number"] {
+                        flex: 1 0 115px;
+                        max-width: 115px;
+                    }
+                }
+
+                select {
+                    width: 100%;
+                    border: 1px solid #4f4f51;
+                    border-radius: 25px;
+                    height: 50px;
+                    padding: 0 30px;
+                    appearance: none;
+                    background-image: url("../images/svg/arrow-bottom.svg");
+                    background-size: 21px 12px;
+                    background-position: 95% center;
+                    background-repeat: no-repeat;
+                }
+
+                label {
+                    margin-right: 15px;
+                }
+            }
+            &.consent {
+                .item {
+                    justify-content: space-between;
+                    input[type="checkbox"] {
+                        display: none;
+                        &:checked + label::before {
+                            background-image: url("../images/svg/check.svg");
+                            background-repeat: no-repeat;
+                            background-position: center;
+                        }
+                    }
+                    label {
+                        position: relative;
+                        padding-left: 30px;
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            width: 20px;
+                            height: 20px;
+                            border: 1px solid #e5e5e5;
+                            left: 0;
+                            top: 0;
+                        }
+                    }
+                    &:last-child {
+                        justify-content: flex-end;
+                    }
+                }
+                .main-button {
+                    width: auto;
+                    background-color: $color-red;
+                    color: $color-white;
+                    border: 0;
+                    &:hover {
+                        background-color: #ef1818;
+                        border-color: transparent;
+                        span {
+                            color: $color-white;
+                        }
+                        svg {
+                            path {
+                                fill: $color-white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

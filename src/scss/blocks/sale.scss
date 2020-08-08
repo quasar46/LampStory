@@ -1,0 +1,111 @@
+.sale {
+    margin-bottom: 95px;
+    .slick-dots {
+        width: 25px;
+        bottom: auto;
+        top: 50%;
+        right: 130px;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        li {
+            &.slick-active {
+                width: 16px;
+                height: 16px;
+                background-color: $color-red;
+            }
+            margin-bottom: 10px;
+            width: 10px;
+            height: 10px;
+            background-color: $color-white;
+            border-radius: 50%;
+            font-size: 0;
+            padding: 0;
+            &:before {
+                font-size: 0;
+            }
+            button {
+                &::before {
+                    font-size: 0;
+                }
+            }
+        }
+        @media (max-width: 768px) {
+            width: 100%;
+            bottom: -50px;
+            top: auto;
+            transform: none;
+            left: 0;
+            flex-direction: row;
+            justify-content: center;
+            li {
+                background-color: #bababa;
+            }
+        }
+    }
+}
+
+.sale__item {
+    background-color: $color-orange;
+    background-image: url("../images/sale1.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right center;
+    @media (max-width: 768px) {
+        background-position: top;
+    }
+}
+
+.sale__inner {
+    padding: 65px 0;
+    .item {
+        display: flex;
+        flex-direction: column;
+        h2 {
+            color: #fbfbfb;
+            font-size: 48px;
+            font-weight: 700;
+            font-family: $font-title;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            @media (max-width: 768px) {
+                font-size: 14px;
+                text-align: center;
+            }
+        }
+        .subtitle {
+            font-size: 24px;
+            font-weight: 700;
+            font-family: $font-title;
+            color: $color-white;
+            text-transform: uppercase;
+            margin-bottom: 45px;
+            @media (max-width: 768px) {
+                font-size: 14px;
+                text-align: center;
+            }
+        }
+        a.button {
+            text-decoration: none;
+            color: $color-white;
+            line-height: 50px;
+            border: 1px solid #ffffff;
+            border-radius: 25px;
+            padding: 0 30px;
+            align-self: flex-start;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-family: $font-title;
+            @media (max-width: 768px) {
+                align-self: center;
+                font-size: 12px;
+                line-height: 40px;
+            }
+        }
+    }
+    @media (max-width: 768px) {
+        padding-top: 50%;
+        padding-bottom: 30px;
+    }
+}

@@ -1,0 +1,34 @@
+.mobile-menu {
+    display: none;
+    position: fixed;
+    z-index: 200;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $color-white;
+    &.active {
+        display: block;
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        li {
+            span {
+                margin-left: 10px;
+            }
+            a {
+                display: flex;
+                align-items: center;
+                padding: 20px;
+                text-decoration: none;
+                color: $color-text;
+            }
+        }
+    }
+    .closed {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 300;
+    }
+}

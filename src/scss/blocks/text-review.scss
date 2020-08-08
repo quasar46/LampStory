@@ -1,0 +1,120 @@
+.text-review {
+    margin-bottom: 100px;
+    .tabs__caption {
+        display: flex;
+        margin-bottom: 25px;
+        li {
+            a {
+                font-weight: 700;
+                font-family: $font-title;
+                cursor: pointer;
+                svg {
+                    margin-right: 10px;
+                    path {
+                        fill: $color-text;
+                    }
+                }
+                &:first-child {
+                    margin-right: 25px;
+                }
+            }
+            &.active {
+                a {
+                    border-color: $color-orange;
+                    svg {
+                        path {
+                            fill: $color-orange;
+                        }
+                    }
+                    span {
+                        color: $color-orange;
+                    }
+                }
+                .main-button {
+                    &:hover {
+                        background-color: #eb690a;
+                        span {
+                            color: $color-white;
+                        }
+                    }
+                }
+            }
+            .main-button {
+                &:hover {
+                    background-color: #ef1818;
+                    border-color: transparent;
+                    span {
+                        color: $color-white;
+                    }
+                    svg {
+                        path {
+                            fill: $color-white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .tabs__content {
+        display: none;
+        &.active {
+            display: block;
+        }
+    }
+    .reviews__content {
+        li.item {
+            border: 1px solid #bababa;
+            padding: 30px;
+            margin-bottom: 15px;
+            .item__head {
+                display: flex;
+                margin-bottom: 20px;
+                .picture {
+                    margin-right: 15px;
+                }
+                .group {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    .name {
+                        font-weight: 700;
+                    }
+                    .city {
+                        color: #bababa;
+                    }
+                }
+            }
+            .item__footer {
+                margin-bottom: 20px;
+            }
+        }
+        .reviews__answer {
+            button.answer-show {
+                border: 0;
+                background-color: transparent;
+                margin-bottom: 20px;
+                font-family: $font-title;
+                font-weight: 300;
+                &.active {
+                    color: $color-orange;
+                }
+            }
+            .textarea-container {
+                display: none;
+                textarea {
+                    width: 100%;
+                    border: 1px solid #bababa;
+                    background-color: #fbfbfb;
+                    resize: none;
+                    font-size: 16px;
+                    color: #bababa;
+                    font-family: $font-title;
+                    padding: 25px 30px;
+                }
+            }
+        }
+    }
+    @media (max-width: 768px) {
+        display: none;
+    }
+}

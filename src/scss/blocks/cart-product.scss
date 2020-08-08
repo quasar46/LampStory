@@ -1,0 +1,164 @@
+.cart-product {
+    background-color: $color-white;
+    padding: 35px 0;
+    .main-footer__mobile-menu {
+        border-top: 0;
+    }
+    @media (max-width: 768px) {
+        padding: 15px 0;
+    }
+}
+
+.cart-product__item {
+    display: flex;
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+}
+
+.cart-product__slider {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 450px;
+    max-width: 450px;
+    padding: 35px;
+    .slider-for {
+        width: 100%;
+        height: 450px;
+        margin-bottom: 25px;
+        button.slick-prev {
+            background-image: url("../images/svg/arrow-prev.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 10px;
+            height: 20px;
+        }
+        button.slick-next {
+            background-image: url("../images/svg/arrow-next.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 10px;
+            height: 20px;
+        }
+        .item-big {
+            height: 100%;
+        }
+        @media (max-width: 768px) {
+            height: 100%;
+        }
+    }
+    .slider-nav {
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+    @media (max-width: 768px) {
+        margin: 0 auto;
+        max-width: 300px;
+        flex: 0 0 auto;
+    }
+}
+
+.cart-product__description {
+    padding: 35px;
+    h2 {
+        margin-bottom: 15px;
+    }
+    .subtitle {
+        font-size: 12px;
+        color: $color-orange;
+        margin-bottom: 30px;
+    }
+    .head {
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+    .price {
+        font-size: 36px;
+        font-weight: 700;
+        font-family: $font-title;
+        margin-bottom: 40px;
+        @media (max-width: 768px) {
+            font-size: 20px;
+            text-align: center;
+        }
+    }
+    .label {
+        span {
+            font-family: $font-title;
+        }
+        margin-bottom: 20px;
+    }
+    .cart-product__specifications {
+        li {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            span {
+                &:first-child {
+                    font-weight: 700;
+                }
+                &.underline {
+                    flex: 1 0 auto;
+                    border-bottom: 1px solid #e5e5e5;
+                }
+                &:last-child {
+                    flex: 1 0 250px;
+                    max-width: 250px;
+                    font-weight: 400;
+                }
+            }
+        }
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+    .btns {
+        display: flex;
+        a.main-button {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+            &--compare {
+                border-color: $color-red;
+                svg {
+                    margin-right: 10px;
+                    flex: 1 0 25px;
+                    max-width: 25px;
+                }
+                span {
+                    color: $color-red;
+                }
+                @media (max-width: 768px) {
+                    border: 0;
+                    margin-right: 0;
+                    line-height: initial;
+                    padding: 0;
+                    margin-top: 10px;
+                    order: 1;
+                }
+            }
+            &--by {
+                background-color: $color-red;
+                color: $color-white;
+                border: 0;
+                justify-content: center;
+            }
+            &:hover {
+                background-color: #ef1818;
+                span {
+                    color: $color-white;
+                }
+                svg {
+                    path {
+                        fill: $color-white;
+                    }
+                }
+            }
+        }
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
+    }
+}

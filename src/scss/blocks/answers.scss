@@ -1,0 +1,89 @@
+.answers {
+    padding-top: 95px;
+    padding-bottom: 150px;
+    h2 {
+        margin-bottom: 50px;
+    }
+    .slick-dots {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        li {
+            &.slick-active {
+                width: 7px;
+                height: 7px;
+                background-color: $color-red;
+            }
+            width: 5px;
+            height: 5px;
+            background-color: #bababa;
+            border-radius: 50%;
+            font-size: 0;
+            padding: 0;
+            &:before {
+                font-size: 0;
+            }
+            button {
+                &::before {
+                    font-size: 0;
+                }
+            }
+        }
+    }
+    @media(max-width: 768px) {
+        padding-bottom: 90px;
+    }
+}
+
+.answers__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    li.item {
+        width: calc(100% / 2 - 10px);
+        display: flex;
+        margin-bottom: 20px;
+        h3 {
+            margin-bottom: 10px;
+            font-size: 20px;
+            font-family: $font-title;
+            @media (max-width: 768px) {
+                text-align: center;
+            }
+        }
+        &:nth-child(even) {
+            .picture {
+                order: 1;
+                margin-left: 20px;
+                margin-right: 0;
+                @media (max-width: 992px) {
+                    order: 0;
+                    margin-left: 0;
+                    margin-right: 20px;
+                }
+            }
+        }
+        .picture {
+            flex: 1 0 340px;
+            max-width: 340px;
+            margin-right: 20px;
+            @media (max-width: 768px) {
+                max-width: 320px;
+            }
+        }
+        .content {
+            p {
+                @media (max-width: 768px) {
+                    text-align: center;
+                }
+            }
+        }
+        @media (max-width: 1024px) {
+            width: 100%;
+        }
+        @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}

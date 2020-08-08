@@ -1,0 +1,41 @@
+.advantages {
+    margin-bottom: 50px;
+    ul {
+        display: flex;
+        justify-content: space-around;
+        li {
+            display: flex;
+            flex-direction: column;
+            .picture {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 15px;
+                @media (max-width: 768px) {
+                    margin-bottom: 10px;
+                }
+            }
+            p {
+                font-size: 18px;
+                font-family: $font-title;
+                text-align: center;
+                font-weight: 300;
+                @media (max-width: 768px) {
+                    font-size: 14px;
+                }
+            }
+            svg {
+                @media (max-width: 768px) {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+            @media(max-width: 768px) {
+                margin-bottom: 25px;
+            }
+        }
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
+    }
+}

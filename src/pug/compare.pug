@@ -1,0 +1,101 @@
+doctype html
+html(lang="ru")
+    head
+        include modules/head.pug
+    body
+        .content
+            include modules/header.pug
+
+            main.page-compare
+                //- breadcrumbs
+                section.breadcrumbs
+                    .container
+                        ul
+                            li
+                                a(href="index.html") Главная
+                            li
+                                span /
+                            li
+                                a.current Сравнение товаров
+
+                        a.main-button(href="main-catalog.html") 
+                            span В каталог
+                            <svg width="12" height="21" viewBox="0 0 12 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.869096 9.29602L9.44448 0.295551C9.82076 -0.098517 10.4304 -0.098517 10.8076 0.295551C11.1839 0.689619 11.1839 1.32969 10.8076 1.72376L2.91244 10.0101L10.8067 18.2964C11.183 18.6905 11.183 19.3305 10.8067 19.7256C10.4304 20.1197 9.81981 20.1197 9.44353 19.7256L0.868145 10.7251C0.497564 10.3351 0.497564 9.68501 0.869096 9.29602Z" fill="#4F4F51"/></svg>
+                section.compare
+                    .container
+                        h2.main-title Сравнение товаров
+                        .compare__products
+                            .compare__head
+                                h2.main-title Конструкторы развивающие
+                                a.main-button Очистить список
+                            .hits__content
+                                ul
+                                    li.item
+                                        .item__head
+                                            .picture
+                                                img(src="images/hits/item1.png" alt="")
+                                            .item__title
+                                                a(href="").name Конструкторы развивающие
+                                                a(href="").description Конструктор с шуруповертом Рыбка
+                                        .item__footer
+                                            .price-wrap
+                                                span.price 2290 ₽
+                                    li.item
+                                        .item__head
+                                            .picture
+                                                img(src="images/hits/item2.png" alt="")
+                                            .item__title
+                                                a(href="").name Конструкторы развивающие
+                                                a(href="").description Конструктор с шуруповертом Рыбка
+                                        .item__footer
+                                            .price-wrap
+                                                span.price 2290 ₽
+                                        .billet.billet--sale 50%
+                                    li.item.item--add
+                                        button.add-product
+                                            <svg class="desctop" width="72" height="71" viewBox="0 0 72 71" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M36.1 70.95C33.9 70.95 32.05 70.25 30.55 68.85C29.15 67.35 28.45 65.5 28.45 63.3V43.2H8.34995C6.14995 43.2 4.29995 42.45 2.79995 40.95C1.39995 39.45 0.699951 37.6 0.699951 35.4C0.699951 33.2 1.39995 31.4 2.79995 30C4.29995 28.5 6.14995 27.75 8.34995 27.75H28.45V7.65C28.45 5.55 29.2 3.75001 30.7 2.25001C32.3 0.750002 34.1 0 36.1 0C38.4 0 40.25 0.750002 41.65 2.25001C43.05 3.65001 43.75 5.45 43.75 7.65V27.75H63.85C65.95 27.75 67.75 28.5 69.25 30C70.85 31.5 71.65 33.35 71.65 35.55C71.65 37.65 70.85 39.45 69.25 40.95C67.75 42.45 65.95 43.2 63.85 43.2H43.75V63.3C43.75 65.5 43.05 67.35 41.65 68.85C40.25 70.25 38.4 70.95 36.1 70.95Z" fill="#BABABA"/></svg>
+
+                                .btns-mobile
+                                    .add-item
+                                        <svg width="36" height="35" viewBox="0 0 36 35" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="36" height="35" rx="17.5" fill="#FF4A4A"/><path d="M17.9831 26C17.487 26 17.0698 25.8421 16.7315 25.5264C16.4158 25.1882 16.2579 24.771 16.2579 24.2748V19.7421H11.7252C11.229 19.7421 10.8118 19.5729 10.4736 19.2347C10.1579 18.8964 10 18.4792 10 17.9831C10 17.487 10.1579 17.081 10.4736 16.7653C10.8118 16.4271 11.229 16.2579 11.7252 16.2579H16.2579V11.7252C16.2579 11.2516 16.4271 10.8457 16.7653 10.5074C17.1261 10.1691 17.5321 10 17.9831 10C18.5018 10 18.919 10.1691 19.2347 10.5074C19.5504 10.8231 19.7082 11.229 19.7082 11.7252V16.2579H24.241C24.7146 16.2579 25.1205 16.4271 25.4588 16.7653C25.8196 17.1036 26 17.5208 26 18.0169C26 18.4905 25.8196 18.8964 25.4588 19.2347C25.1205 19.5729 24.7146 19.7421 24.241 19.7421H19.7082V24.2748C19.7082 24.771 19.5504 25.1882 19.2347 25.5264C18.919 25.8421 18.5018 26 17.9831 26Z" fill="white"/></svg>
+                                    .clear-list
+                                        a.main-button Очистить список
+
+                        .compare__specifications
+                            .compare__head
+                                h2.main-title Сравнение характеристик
+                                .input
+                                    input(type="checkbox" id="check1")
+                                    label(for="check1") Показать одинаковые характеристики
+                            .compare__specifications-inner
+                                ul
+                                    li
+                                        h3 Количество деталей
+                                        .row
+                                            span 68
+                                            span 215
+                                    li
+                                        h3 Размер (см)
+                                        .row
+                                            span 32х31х9
+                                            span 45х21х7
+                                    li
+                                        h3.mode Наличие инструментов
+                                        .row
+                                            span Шуруповерт + 2 насадки
+                                            span Шуруповерт + 2 насадки
+                                    li
+                                        h3 Возраст
+                                        .row
+                                            span 1+
+                                            span 1+
+
+
+
+
+
+
+
+    include modules/footer.pug
+    //- include modules/menu-mobile.pug
+    include modules/script.pug

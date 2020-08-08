@@ -1,0 +1,204 @@
+.main-catalog {
+    h2.main-title {
+        @media (max-width: 768px) {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.main-catalog__head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    .col {
+        display: flex;
+        align-items: center;
+        &--1 {
+            font-size: 30px;
+            font-family: $font-title;
+            b {
+                font-weight: 700;
+                margin-right: 5px;
+            }
+            @media (max-width: 768px) {
+                font-size: 16px;
+                margin-bottom: 30px;
+            }
+        }
+        &--2 {
+            p {
+                font-weight: 700;
+                margin-right: 15px;
+            }
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+        &--mobile {
+            display: none;
+
+            @media (max-width: 768px) {
+                display: flex;
+                justify-content: center;
+                .main-button {
+                    margin-right: 30px;
+                    &:last-child {
+                        margin-right: 0;
+                        text-transform: initial;
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.main-catalog__wrapper {
+    background-color: $color-white;
+    padding-bottom: 110px;
+    .container {
+        display: flex;
+        padding-top: 55px;
+        .aside {
+            flex: 1 0 240px;
+            max-width: 240px;
+            margin-right: 50px;
+            .main-filter {
+                ul {
+                    li {
+                        margin-bottom: 20px;
+
+                        label {
+                            display: flex;
+                            position: relative;
+                            padding-left: 30px;
+                            font-size: 15px;
+                            font-weight: 400;
+                            cursor: pointer;
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 20px;
+                                height: 20px;
+                                border: 1px solid #e5e5e5;
+                            }
+                        }
+                        input {
+                            display: none;
+                            &:checked + label::before {
+                                background-image: url("../images/svg/check.svg");
+                                background-size: contain;
+                                background-repeat: no-repeat;
+                                background-position: center;
+                            }
+                        }
+                        &.title {
+                            margin-bottom: 25px;
+                        }
+                    }
+                    &.cost {
+                        .group-price {
+                            display: flex;
+                            input {
+                                line-height: 50px;
+                                border: 1px solid #4f4f51;
+                                border-radius: 25px;
+                                display: block;
+                                width: 50%;
+                                margin-right: 15px;
+                                padding: 0 20px;
+                                color: #bababa;
+                                &:last-child {
+                                    margin-right: 0;
+                                }
+                            }
+                        }
+                        input[type="radio"] {
+                            display: none;
+                            &:checked + label::before {
+                                background-image: url("../images/svg/radio.svg");
+                                width: 16px;
+                                height: 16px;
+                                background-size: cover;
+                                background-position: center;
+                            }
+                        }
+                        label {
+                            position: relative;
+                            padding-left: 30px;
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                width: 20px;
+                                height: 20px;
+                                border-radius: 50%;
+                                border: 1px solid #e5e5e5;
+                            }
+                        }
+                    }
+                }
+                input[type="submit"] {
+                    background-color: $color-red;
+                    border: 0;
+                    color: $color-white;
+                    border-radius: 25px;
+                    line-height: 50px;
+                    padding: 0 30px;
+                    margin-bottom: 40px;
+                    &:hover {
+                        background-color: #ef1818;
+                    }
+                }
+                input[type="reset"] {
+                    position: relative;
+                    padding-left: 40px;
+                    background-color: transparent;
+                    border: 0;
+                    background-image: url("../images/svg/reset.svg");
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: left top;
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+            }
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+    }
+}
+
+ul.main-catalog__list {
+    flex-wrap: wrap;
+    li.item {
+        width: calc(100% / 3 - 20px);
+        margin-right: 0;
+    }
+    a.main-button.main-button--more {
+        display: none;
+        @media (max-width: 768px) {
+            display: block;
+            align-self: center;
+            color: $color-text;
+        }
+    }
+}
+
+.main-catalog__content {
+    .main-catalog__list {
+        li.item {
+            @media (max-width: 768px) {
+                width: 100%;
+            }
+        }
+    }
+    @media (max-width: 768px) {
+        margin: 0 auto;
+    }
+}
