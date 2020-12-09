@@ -51,6 +51,12 @@
 }
 
 .hits__content {
+    span.delete {
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+    }
     ul {
         display: flex;
         justify-content: space-between;
@@ -109,6 +115,7 @@
                     margin-right: 10px;
                     align-items: flex-start;
                     height: auto;
+                    margin-bottom: 15px;
                 }
             }
             .name {

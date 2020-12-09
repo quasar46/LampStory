@@ -22,6 +22,7 @@ $(document).ready(function () {
     $('.slick-photo').slick({
         mobileFirst: true,
         dots: true,
+        rows: 2,
         slidesToShow: 2,
         responsive: [{
             breakpoint: 768,
@@ -108,7 +109,10 @@ $(document).ready(function () {
 $(document).ready(function () {
     $('.answer-show').on('click', function () {
         $(this).toggleClass('active');
-        $(this).siblings().slideToggle();
+        $(this).siblings().slideToggle('medium', function () {
+            if ($(this).is(':visible'))
+                $(this).css('display', 'flex');
+        });
     })
 })
 
@@ -129,17 +133,38 @@ $(document).ready(function () {
 $(document).ready(function () {
     $('.show-picture-1').hover(function () {
         $('.main-hero').css('backgroundImage', 'url("../images/main-hero.jpg")')
+        $('.main-hero__rectangle h2').text('LAMPSTORY')
+        $('.main-hero__rectangle p').text('СКИДКА 50% НА ВСЕ БЕСПРОВОДНЫЕ НОЧНИКИ')
     })
     $('.show-picture-2').hover(function () {
         $('.main-hero').css('backgroundImage', 'url("../images/main-hero-2.jpg")')
+        $('.main-hero__rectangle h2').text('текст2')
+        $('.main-hero__rectangle p').text('Статья2')
     })
     $('.show-picture-3').hover(function () {
         $('.main-hero').css('backgroundImage', 'url("../images/main-hero-3.jpg")')
+        $('.main-hero__rectangle h2').text('текст3')
+        $('.main-hero__rectangle p').text('Статья3')
     })
     $('.show-picture-4').hover(function () {
         $('.main-hero').css('backgroundImage', 'url("../images/main-hero-4.jpg")')
+        $('.main-hero__rectangle h2').text('текст4')
+        $('.main-hero__rectangle p').text('Статья4')
     })
     $('.show-picture-5').hover(function () {
         $('.main-hero').css('backgroundImage', 'url("../images/main-hero-5.jpg")')
+        $('.main-hero__rectangle h2').text('текст5')
+        $('.main-hero__rectangle p').text('Статья5')
+    })
+})
+
+$(document).ready(function () {
+    $('#filters').on('click', function () {
+        $('.aside').toggle();
+        $('.main-filter').toggleClass('active');
+    })
+    $('#toggle-list').on('click', function() {
+        $(this).toggleClass('active');
+        $('#toggle-list ul.submenu').toggleClass('active');
     })
 })

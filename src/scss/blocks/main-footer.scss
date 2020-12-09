@@ -33,6 +33,7 @@
             span {
                 font-size: 18px;
                 color: #bababa;
+                white-space: nowrap;
             }
 
             &.social {
@@ -110,6 +111,8 @@
 .main-footer__copyright {
     display: flex;
     justify-content: space-between;
+    position: relative;
+    top: -20px;
     p {
         font-size: 14px;
         font-weight: 300;
@@ -132,14 +135,16 @@
     @media (max-width: 768px) {
         flex-direction: column;
         align-items: center;
+        top: 0;
     }
 }
 
 .main-footer__contacts {
     .title {
-        text-align: center;
+        text-align: left;
         @media (max-width: 768px) {
             margin-bottom: 20px;
+            text-align: center;
         }
     }
     li.btns {
@@ -178,6 +183,7 @@
         @media (max-width: 768px) {
             flex-direction: column;
             align-items: center;
+            margin-bottom: 30px;
         }
     }
     &--desctop {

@@ -40,14 +40,48 @@
             @media (max-width: 768px) {
                 display: flex;
                 justify-content: center;
+                width: 100%;
+                justify-content: space-between;
                 .main-button {
-                    margin-right: 30px;
+                    margin-right: 0;
                     &:last-child {
                         margin-right: 0;
                         text-transform: initial;
                     }
+                    &#toggle-list {
+                        display: flex;
+                        flex-direction: column;
+                        &.active {
+                            .main-button__wrapper {
+                                svg {
+                                    transform: rotate(180deg);
+                                }
+                            }
+                        }
+
+                        ul.submenu {
+                            display: none;
+                            flex-direction: column;
+                            position: relative;
+                            line-height: 1.2;
+
+                            &.active {
+                                display: flex;
+                                li {
+                                    margin-bottom: 10px;
+                                }
+                                span {
+                                    font-size: 12px;
+                                    margin-right: 0;
+                                }
+                            }
+                        }
+                    }
                 }
             }
+        }
+        @media (max-width: 768px) {
+            align-items: flex-start;
         }
     }
     @media (max-width: 768px) {
@@ -67,6 +101,8 @@
             max-width: 240px;
             margin-right: 50px;
             .main-filter {
+                display: flex;
+                flex-direction: column;
                 ul {
                     li {
                         margin-bottom: 20px;
@@ -87,6 +123,9 @@
                                 height: 20px;
                                 border: 1px solid #e5e5e5;
                             }
+                            @media (max-width: 768px) {
+                                font-size: 14px;
+                            }
                         }
                         input {
                             display: none;
@@ -98,7 +137,13 @@
                             }
                         }
                         &.title {
+                            font-family: $font-title;
                             margin-bottom: 25px;
+                            @media (max-width: 768px) {
+                                font-size: 16px;
+                                font-weight: 700;
+                                color: #4f4f51;
+                            }
                         }
                     }
                     &.cost {
@@ -143,6 +188,7 @@
                     }
                 }
                 input[type="submit"] {
+                    align-self: flex-start;
                     background-color: $color-red;
                     border: 0;
                     color: $color-white;
@@ -153,8 +199,12 @@
                     &:hover {
                         background-color: #ef1818;
                     }
+                    @media (max-width: 768px) {
+                        align-self: center;
+                    }
                 }
                 input[type="reset"] {
+                    align-self: flex-start;
                     position: relative;
                     padding-left: 40px;
                     background-color: transparent;
@@ -165,10 +215,20 @@
                     background-position: left top;
                     font-size: 16px;
                     font-weight: 400;
+                    @media (max-width: 768px) {
+                        align-self: center;
+                    }
                 }
             }
             @media (max-width: 768px) {
                 display: none;
+                top: 0;
+                margin-right: 0;
+                min-width: 100%;
+                position: absolute;
+                background-color: $color-white;
+                z-index: 100;
+                padding: 40px 0;
             }
         }
     }

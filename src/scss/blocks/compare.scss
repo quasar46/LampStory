@@ -86,12 +86,13 @@
                     }
                 }
                 @media (max-width: 768px) {
-                    width: calc(100% / 2);
+                    width: calc(100% / 2 - 20px);
                 }
             }
             @media (max-width: 768px) {
                 flex-wrap: wrap;
                 flex-direction: row;
+                justify-content: space-between;
             }
         }
         .btns-mobile {
@@ -103,7 +104,15 @@
                 justify-content: center;
                 align-items: center;
                 .add-item {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                     margin-right: 10px;
+                }
+                .clear-list {
+                    .main-button {
+                        line-height: 35px;
+                    }
                 }
             }
         }

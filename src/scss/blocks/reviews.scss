@@ -131,6 +131,24 @@
             }
         }
     }
+
+    .reviews__answer {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        button.answer-show {
+            margin-bottom: 0;
+        }
+        button.main-button {
+            background-color: $color-red;
+            color: $color-white;
+            border-color: transparent;
+            align-items: center;
+            align-self: flex-end;
+        }
+    }
+
     @media (max-width: 768px) {
         margin-bottom: 100px;
     }

@@ -1,6 +1,7 @@
 .cart-product {
     background-color: $color-white;
     padding: 35px 0;
+    margin-bottom: 40px;
     .main-footer__mobile-menu {
         border-top: 0;
     }
@@ -61,8 +62,10 @@
 
 .cart-product__description {
     padding: 35px;
-    h2 {
+    h1 {
         margin-bottom: 15px;
+        font-weight: 700;
+        font-family: $font-title;
     }
     .subtitle {
         font-size: 12px;

@@ -30,7 +30,7 @@
             }
         }
     }
-    @media(max-width: 768px) {
+    @media (max-width: 768px) {
         padding-bottom: 90px;
     }
 }
@@ -61,6 +61,9 @@
                     margin-left: 0;
                     margin-right: 20px;
                 }
+                @media (max-width: 768px) {
+                    margin-right: 0;
+                }
             }
         }
         .picture {
@@ -69,6 +72,7 @@
             margin-right: 20px;
             @media (max-width: 768px) {
                 max-width: 320px;
+                margin-right: 0;
             }
         }
         .content {

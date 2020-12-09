@@ -45,6 +45,7 @@
 .contacts__property {
     display: flex;
     margin-bottom: 30px;
+    justify-content: space-between;
     ul {
         li {
             margin-bottom: 10px;
@@ -56,6 +57,9 @@
     }
     span.fat {
         font-weight: 700;
+    }
+    @media (max-width: 768px) {
+        flex-direction: column;
     }
 }
 
@@ -69,8 +73,21 @@
         margin-bottom: 15px;
         line-height: 50px;
         padding: 0 30px;
-        color: #bababa;
+        color: $color-text;
     }
+    input::-moz-placeholder {
+        color: $color-text;
+    }
+    input::-webkit-input-placeholder {
+        color: $color-text;
+    }
+    textarea::-moz-placeholder {
+        color: $color-text;
+    }
+    textarea::-webkit-input-placeholder {
+        color: $color-text;
+    }
+
     textarea {
         border-radius: 25px;
         height: 155px;
